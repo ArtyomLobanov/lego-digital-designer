@@ -8,13 +8,13 @@ public class GameSessionTest {
 
     @Test
     public void whoseTurn() throws DeckIsEmptyException {
-        GameSession gameSession = new GameSession(0);
+        GameSession gameSession = new GameSession();
         assertNotNull(gameSession.getTurn());
     }
 
     @Test
     public void cardsTest() throws DeckIsEmptyException {
-        GameSession gameSession = new GameSession(0);
+        GameSession gameSession = new GameSession();
         assertNotNull(gameSession.getCards(GameSession.Turn.PLAYER));
         assertNotNull(gameSession.getCards(GameSession.Turn.DEALER));
     }
