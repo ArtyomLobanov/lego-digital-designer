@@ -19,10 +19,10 @@ public class Card {
     }
 
     public enum Suit {
+        HEARTS,
         DIAMONDS,
-        SPADES,
         CLUBS,
-        HEARTS
+        SPADES
     }
 
     private final Suit suit;
@@ -39,18 +39,30 @@ public class Card {
 
     public int getPoints(int points) {
         switch (value) {
-            case TWO: return 2;
-            case THREE: return 3;
-            case FOUR: return 4;
-            case FIVE: return 5;
-            case SIX: return 6;
-            case SEVEN: return 7;
-            case EIGHT: return 8;
-            case NINE: return 9;
-            case TEN: return 10;
-            case JACK: return 2;
-            case QUEEN: return 3;
-            case KING: return 4;
+            case TWO:
+                return 2;
+            case THREE:
+                return 3;
+            case FOUR:
+                return 4;
+            case FIVE:
+                return 5;
+            case SIX:
+                return 6;
+            case SEVEN:
+                return 7;
+            case EIGHT:
+                return 8;
+            case NINE:
+                return 9;
+            case TEN:
+                return 10;
+            case JACK:
+                return 2;
+            case QUEEN:
+                return 3;
+            case KING:
+                return 4;
             case ACE:
                 if (points + 11 > 21) return 1;
                 return 11;
